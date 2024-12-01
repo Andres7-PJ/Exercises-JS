@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Notas estudiantes</title>
+</head>
+<body>
+
+	<label for="numEstudiantes">Numero de estudiantes:</label>
+	<input type="number" id ="numEstudiantes">
+	<button onclick="calcularNotas()">Calcular</button>
+	<p id="resultado"></p>
+
+	<script>
+		function calcularNotas() {
+			const numEstudiantes = parseInt(document.getElementById('numEstudiantes').value);
+			let notas = [];
+			let sumaNotas = 0;
+
+			for (let i = 0; i < numEstudiantes; i++) {
+				const nota = parseFloat(prompt(`Ingrese
+				 Ingrese la nota del estudiante ${i + 1}:`));
+				notas.push(nota);
+				sumaNotas += nota;
+			}
+
+			const notaMayor = Math.max(...notas);
+			const notaMenor = Math.min(...notas);
+			const promedio = sumaNotas / numEstudiantes;
+
+
+			document.getElementById('resultado').innerHTML = `
+			<br>La nota mas alta es: ${notaMayor}
+			<br>La nota mas baja es: ${notaMenor}
+			<br>La nota mas alta es: ${promedio.toFixed(2)}`;
+			}
+
+
+
+
+	</script>
+
+</body>
+</html>

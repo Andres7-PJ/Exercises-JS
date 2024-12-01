@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Conversor </title>
+</head>
+<body>
+
+	<input type="number" id="numero" min="1"
+max="5">
+	<button onclick="convertir()">convertir</button>
+	<p id="resultado"></p>
+
+
+
+
+	<script type="text/javascript">
+		function convertir() {
+			const numero = document.getElementById('numero').value;
+			const resultado = document.getElementById('resultado');
+
+			switch (numero) {
+				case '1':
+					resultado.textContent = "El numero 1 corresponde a la vocal: A";
+					break;
+				case '2':
+					resultado.textContent = "El numero 2 corresponde a la vocal: E";
+					break;
+				case '3':
+					resultado.textContent = "El numero 3 corresponde a la vocal: I";
+					break;
+				case '4':
+					resultado.textContent = "El numero 4 corresponde a la vocal: O";
+					break;
+				case '5':
+					resultado.textContent = "El numero 5 corresponde a la vocal: U";
+					break;
+				default:
+					resultado.textContent = "Ingrese un numero entre 1 y 5"
+				}
+		}
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>
